@@ -4,36 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مدونتي الذكية</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- رابط مكتبة الأيقونات -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="script.js"></script>
 </head>
-<body>
+<body class="bg-gray-900 text-white font-sans">
+
     <!-- رأس الصفحة -->
-    <header class="header">
-        <div class="logo">Smart Blog</div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">الرئيسية</a></li>
-                <li><a href="#">مقالات</a></li>
-                <li><a href="#">من نحن</a></li>
-                <li><a href="#">تواصل معنا</a></li>
-            </ul>
-        </nav>
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-wrap justify-between items-center p-4">
+            <h1 class="text-3xl font-bold text-blue-400">Smart Blog</h1>
+            <nav>
+                <ul class="flex flex-wrap space-x-6">
+                    <li><a href="#home" class="nav-link hover:text-blue-400 transition">الرئيسية</a></li>
+                    <li><a href="#articles" class="nav-link hover:text-blue-400 transition">مقالات</a></li>
+                    <li><a href="#about" class="nav-link hover:text-blue-400 transition">من نحن</a></li>
+                    <li><a href="#contact" class="nav-link hover:text-blue-400 transition">تواصل معنا</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- قسم المحتوى الرئيسي -->
-    <main class="main-content">
-        <section class="intro">
-            <h1>مرحبًا بك في مدونتي</h1>
-            <p>مدونة ذكية ومتطورة تقدم لك محتوى تقنيًا بشكل بسيط وفعّال.</p>
-            <a href="#" class="button">ابدأ التصفح</a>
+    <!-- رسالة مخصصة عبر الذكاء الاصطناعي -->
+    <section id="ai-message" class="text-center bg-gray-800 py-4">
+        <h2 id="welcome-message" class="text-xl text-blue-400">مرحبًا بك في مدونتي الذكية!</h2>
+    </section>
+
+    <!-- المحتوى الرئيسي -->
+    <main id="home" class="container mx-auto mt-10">
+        <!-- مقالات -->
+        <section id="articles" class="mt-10">
+            <h3 class="text-3xl font-bold text-blue-400 mb-4 text-center">مقالات مميزة</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="article-card bg-gray-800 p-6 rounded-lg shadow-lg transition-transform hover:scale-105">
+                    <h4 class="text-2xl font-bold text-blue-300 mb-3">عنوان المقال</h4>
+                    <p class="text-gray-400 mb-4">وصف قصير للمقال هنا.</p>
+                    <button class="read-more bg-blue-500 hover:bg-purple-500 text-gray-900 font-bold py-2 px-4 rounded transition">اقرأ المزيد</button>
+                </div>
+                <!-- نسخ إضافية من المقالات -->
+            </div>
         </section>
     </main>
 
     <!-- تذييل الصفحة -->
-    <footer class="footer">
-        <p>© 2024 جميع الحقوق محفوظة - مدونتي الذكية</p>
+    <footer class="bg-gray-800 mt-16 p-4 text-center">
+        <p>&copy; 2024 جميع الحقوق محفوظة - مدونتي الذكية</p>
     </footer>
+
 </body>
 </html
