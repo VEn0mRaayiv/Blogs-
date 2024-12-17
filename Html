@@ -1,54 +1,75 @@
-Mohamed kamil 
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مدونتي الذكية</title>
+    <title>واجهة مستخدم أنيقة</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="script.js"></script>
+    <style>
+        /* تأثير خلفي على التمرير */
+        body {
+            background: linear-gradient(to bottom, #1e1e2e, #111121);
+            color: white;
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body class="font-sans leading-normal tracking-normal">
 
     <!-- رأس الصفحة -->
-    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto flex flex-wrap justify-between items-center p-4">
-            <h1 class="text-3xl font-bold text-blue-400">Smart Blog</h1>
+    <header class="bg-gray-800 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-400">مدونتي الذكية</h1>
             <nav>
-                <ul class="flex flex-wrap space-x-6">
-                    <li><a href="#home" class="nav-link hover:text-blue-400 transition">الرئيسية</a></li>
-                    <li><a href="#articles" class="nav-link hover:text-blue-400 transition">مقالات</a></li>
-                    <li><a href="#about" class="nav-link hover:text-blue-400 transition">من نحن</a></li>
-                    <li><a href="#contact" class="nav-link hover:text-blue-400 transition">تواصل معنا</a></li>
+                <ul class="flex space-x-4">
+                    <li><a href="#home" class="hover:text-blue-400 transition">الرئيسية</a></li>
+                    <li><a href="#features" class="hover:text-blue-400 transition">المميزات</a></li>
+                    <li><a href="#contact" class="hover:text-blue-400 transition">تواصل معنا</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- رسالة مخصصة عبر الذكاء الاصطناعي -->
-    <section id="ai-message" class="text-center bg-gray-800 py-4">
-        <h2 id="welcome-message" class="text-xl text-blue-400">مرحبًا بك في مدونتي الذكية!</h2>
+    <!-- القسم الرئيسي -->
+    <section id="home" class="text-center py-20">
+        <h2 class="text-4xl font-extrabold text-blue-400 mb-4">مرحبًا بك في مدونتي</h2>
+        <p class="text-gray-300 text-lg mb-6">تصميم أنيق، حديث واحترافي يناسب جميع الأجهزة</p>
+        <button class="bg-blue-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            استكشاف الآن
+        </button>
     </section>
 
-    <!-- المحتوى الرئيسي -->
-    <main id="home" class="container mx-auto mt-10">
-        <!-- مقالات -->
-        <section id="articles" class="mt-10">
-            <h3 class="text-3xl font-bold text-blue-400 mb-4 text-center">مقالات مميزة</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="article-card bg-gray-800 p-6 rounded-lg shadow-lg transition-transform hover:scale-105">
-                    <h4 class="text-2xl font-bold text-blue-300 mb-3">عنوان المقال</h4>
-                    <p class="text-gray-400 mb-4">وصف قصير للمقال هنا.</p>
-                    <button class="read-more bg-blue-500 hover:bg-purple-500 text-gray-900 font-bold py-2 px-4 rounded transition">اقرأ المزيد</button>
-                </div>
-                <!-- نسخ إضافية من المقالات -->
+    <!-- المميزات -->
+    <section id="features" class="py-16 bg-gray-900">
+        <h3 class="text-3xl font-bold text-center text-blue-400 mb-10">مميزات موقعنا</h3>
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
+                <h4 class="text-2xl font-bold text-blue-300 mb-3">تجاوب كامل</h4>
+                <p class="text-gray-400">يدعم جميع الأجهزة: الجوال، التابلت، والكمبيوتر الشخصي.</p>
             </div>
-        </section>
-    </main>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
+                <h4 class="text-2xl font-bold text-blue-300 mb-3">سرعة الأداء</h4>
+                <p class="text-gray-400">تجربة تصفح سريعة مع تحميل خفيف وفعّال.</p>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center hover:scale-105 transition-transform">
+                <h4 class="text-2xl font-bold text-blue-300 mb-3">تفاعل ديناميكي</h4>
+                <p class="text-gray-400">إضافة تأثيرات حية تجعل الموقع أكثر جاذبية.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- تواصل معنا -->
+    <section id="contact" class="py-16 text-center">
+        <h3 class="text-3xl font-bold text-blue-400 mb-4">تواصل معنا</h3>
+        <p class="text-gray-300 mb-6">هل لديك سؤال؟ تواصل معنا الآن عبر البريد الإلكتروني.</p>
+        <a href="mailto:info@example.com" class="text-blue-500 hover:text-purple-500 font-bold transition">
+            info@example.com
+        </a>
+    </section>
 
     <!-- تذييل الصفحة -->
-    <footer class="bg-gray-800 mt-16 p-4 text-center">
-        <p>&copy; 2024 جميع الحقوق محفوظة - مدونتي الذكية</p>
+    <footer class="bg-gray-800 py-4 text-center">
+        <p class="text-gray-400">&copy; 2024 مدونتي الذكية - جميع الحقوق محفوظة</p>
     </footer>
 
 </body>
-</html
+</html>
