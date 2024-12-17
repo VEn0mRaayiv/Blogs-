@@ -1,0 +1,42 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // تخصيص الرسالة بناءً على تفضيلات المستخدم
+    const welcomeMessage = document.getElementById('welcome-message');
+    const userPreference = localStorage.getItem('userPreference');
+
+    if (userPreference) {
+        welcomeMessage.textContent = `مرحبًا بعودتك! لقد اخترت: ${userPreference}`;
+    }
+
+    // تخصيص المقالات عند النقر
+    const buttons = document.querySelectorAll('.read-more');
+    buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            const choice = `مقال ${index + 1}`;
+            localStorage.setItem('userPreference', choice);
+            welcomeMessage.textContent = `لقد اخترت: ${choice}`;
+            alert(`تم تخصيص تجربتك بناءً على اختيارك!`);
+        });
+    });
+
+    // تخصيص تجربة الإضاءة (Dark/Light Mode)
+    const body = document.body;
+    let isDark = localStorage.getItem('darkMode') === 'true';
+
+    function toggleMode() {
+        isDark = !isDark;
+        localStorage.setItem('darkMode', isDark);
+        body.classList.toggle('bg-gray-900', isDark);
+        body.classList.toggle('bg-white', !isDark);
+    }
+
+    const toggleButton = document.createElement('button');
+    toggleButton.textContent = "تبديل الوضع (Dark/Light)";
+    toggleButton.className = "fixed bottom-4 right-4 bg-blue-500 text-gray-900 py-2 px-4 rounded-lg shadow-lg hover:bg-purple-500";
+    toggleButton.addEventListener('click', toggleMode);
+    document.body.appendChild(toggleButton);
+
+    if (!isDark) {
+        body.classList.remove('bg-gray-900');
+        body.classList.add('bg-white');
+    }
+})
