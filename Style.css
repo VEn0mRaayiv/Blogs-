@@ -1,0 +1,97 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2e; /* أسود مائل للأزرق */
+    color: #ffffff;
+}
+
+/* رأس الصفحة */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #282a36; /* رمادي داكن */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #8be9fd; /* أزرق فاتح */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 1.5rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #bd93f9; /* بنفسجي */
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #50fa7b; /* أخضر فاتح */
+}
+
+/* المحتوى الرئيسي */
+.main-content {
+    text-align: center;
+    margin: 5rem auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #44475a, #282a36);
+    border-radius: 20px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
+    max-width: 700px;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    color: #8be9fd; /* أزرق فاتح */
+}
+
+.intro p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    color: #282a36;
+    background-color: #8be9fd; /* أزرق فاتح */
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #bd93f9; /* بنفسجي */
+    color: #ffffff;
+}
+
+/* تذييل الصفحة */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #282a36;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
