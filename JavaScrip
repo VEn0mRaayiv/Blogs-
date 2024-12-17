@@ -40,3 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.add('bg-white');
     }
 })
+document.getElementById("myButton").addEventListener("click", function() {
+  console.log("تم الضغط على الزر");
+});
